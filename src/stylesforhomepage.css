@@ -1,0 +1,115 @@
+body {
+       background: radial-gradient(ellipse at center,  #a0c8ff, #4e8cff);
+    text-align: center;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+h4 {
+    font-size: 18px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    background: linear-gradient(45deg, #55a9ff, #2e6bcc);
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 1.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #2e6bcc, #55a9ff);
+    transition: background 1.6s;
+}
+.Reminder {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: white;
+}
+#line-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    transform: rotate(45deg);
+    animation: lines 2s forwards;
+}
+
+@keyframes lines {
+    0% {
+        width: 0;
+        left: 50%;
+    }
+    100% {
+        width: 100%;
+        left: 0;
+    }
+}
+.logout-button {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #a0c8ff;
+    border: 3px solid #55a9ff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 1.3s;
+}
+
+.logout-button:hover {
+    background: linear-gradient(to right, #2e6bcc, #55a9ff);
+    transition: background 1.6s;
+} 
