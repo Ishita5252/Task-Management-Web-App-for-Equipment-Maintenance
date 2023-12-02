@@ -60,7 +60,6 @@ function CreateCalibrationMachineComponent(){
             //-------------updating schedule if required
             if(doneOnDate && lastDoneDate && nextDueDate && frequencyUnit){
                 let doneOn = new Date(doneOnDate);
-                // if(doneOn >= dateBeforeTenDays){
                     console.log("need to update schedule");
                     date1 = new Date(doneOn);
                     date2 = new Date(doneOn);
@@ -71,8 +70,7 @@ function CreateCalibrationMachineComponent(){
                     } else if (unit === "months") {
                         date2.setMonth(date2.getMonth() + freq1);
                     }
-                    console.log("schedule updated");
-                //}                
+                    console.log("schedule updated");         
             }           
 
             resolve({
@@ -214,9 +212,6 @@ function CreateCalibrationMachineComponent(){
                                     <div className="d-flex align-items-center">
                                         <input type="number" placeholder="Frequency" name="taskFrequency" className="form-control"
                                             value={taskFrequency} onChange={changeTaskFrequencyHandler}/>
-                                        {/* <label style={{ marginLeft: "10px"}}>To </label>
-                                        <input type="number" placeholder="Frequency2" name="taskFrequency2" className="form-control"
-                                            value={taskFrequency2} onChange={changeTaskFrequency2Handler}/>   */}
                                     </div>  
                                     <br></br>
                                     <select
